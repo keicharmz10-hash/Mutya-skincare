@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact | MUTYA SKIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/mutya-base.css">
+    <link rel="stylesheet" href="css/mutya-layout.css">
+    <link rel="stylesheet" href="css/mutya-hero.css">
+    <link rel="stylesheet" href="css/mutya-components.css">
+    <link rel="stylesheet" href="css/mutya-pages.css">
+    <link rel="stylesheet" href="css/mutya-loader.css">
+    <link rel="stylesheet" href="css/mutya-responsive.css"> 
+    <link rel="stylesheet" href="css/experience.css">
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header site-header">
+      <div class="logo">
+        <a href="index.html" aria-label="Back to Home">
+          <img src="images/logo/clearmutyalogo.png" alt="Mutya Skin">
+        </a>
+</div>
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+      </button>
+<!-- Nav Main -->
+      <nav aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" data-ja="ホーム" data-en="Home">ホーム</a>
+        <a href="about.html" class="nav-link" data-ja="Mutyaについて" data-en="About Us">Mutyaについて</a>
+        <a href="science.html" class="nav-link" data-ja="サイエンス" data-en="Science">サイエンス</a>
+        <a href="products.html" class="nav-link" data-ja="商品一覧" data-en="Products">商品一覧</a>
+        <a href="sets.html" class="nav-link" data-ja="セット" data-en="Sets">セット</a>
+        <a href="contact.html" class="nav-link active" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+              <a href="checkout.html" class="btn btn-lux">
+          <svg class="cart-svg" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="9" cy="20" r="1" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+      </nav>
+      <!-- Languange Switch -->
+        <div class="lang-switch">
+          <button class="lang-btn" onclick="setLang('ja')">JP</button>
+          <button class="lang-btn" onclick="setLang('en')">EN</button>
+        </div>
+    </header>
+    <!-- Contact start -->
+    <section class="section narrow">
+      <h1 class="fade-up shimmer" data-ja="お問い合わせ" data-en="Contact Us">お問い合わせ</h1>
+      <br>
+      <form class="form"
+        action="https://formspree.io/f/mwvnogno"
+        method="POST">
+        
+        <label for="name" class="visually-hidden" data-ja="お名前" data-en="Name">お名前</label>
+        <input id="name" name="name" type="text" placeholder="お名前" required>
+    
+        <label for="email" class="visually-hidden" data-ja="メールアドレス" data-en="Email">メールアドレス</label>
+        <input id="email" name="email" type="email" placeholder="メールアドレス" required>
+    
+        <label for="phone" class="visually-hidden" data-ja="お電話番号" data-en="Phone Number">お電話番号</label>
+        <input id="phone" name="phone" type="tel" placeholder="お電話番号">
+    
+        <div class="form-group">
+          <label for="genre" data-ja="お問い合わせ類別" data-en="Contact Category">お問い合わせ類別</label>
+            <br>
+            <select id="genre" class="select-box" name="genre">
+              <option value="product" data-ja="商品について" data-en="About the Product">商品について</option>
+              <option value="delivery" data-ja="配送について" data-en="About delivery">配送について</option>
+              <option value="other" data-ja="他" data-en="Others">他</option>
+            </select>
+        </div>
+        <br>
+        <label for="message" class="visually-hidden" data-ja="お問い合わせ内容" data-en="Message">お問い合わせ内容</label>
+        <textarea id="message" name="message" placeholder="お問い合わせ内容" required></textarea>
+    
+        <button type="submit" class="btn" data-ja="送信" data-en="Send">送信</button>
+    
+      </form>
+    </section>
+    
+    <!-- contact end -->
+    <!-- footer start -->
+    <footer class="index-footer">
+      <div class="mutya-footer__inner">
+          <!-- logo -->
+          <a class="mutya-footer__logo" href="index.html">
+          <img src="images/logo/clearmutyalogo.png" alt="MUTYA SKIN">
+        </a>
+        <!-- Social media -->
+        <nav class="mutya-footer__sns" aria-label="Social media">
+          <a class="mutya-footer__sns-link" href="https://www.instagram.com/mutyaskincare/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="mutya-footer__sns-link" href="https://x.com/home" target="_blank" rel="noopener noreferrer">X</a>
+          <a class="mutya-footer__sns-link" href="https://www.youtube.com/channel/UC4Fh0YcW9X0qU20ruh9Om5w" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </nav>
+        <!-- TEL Number・電話番号 -->
+        <p class="mutya-footer__tel">
+          <span data-ja="MUTYA SKIN お客さま窓口" data-en="MUTYA SKIN Inquiries">MUTYA SKIN Inquiries</span><br>
+          <a href="tel:0120147554">0120-147-554</a>
+        </p>
+        <!-- faq,contact,privacy -->
+        <nav class="mutya-footer__navi" aria-label="Footer navigation">
+          <a href="faq.html" data-ja="よくあるご質問" data-en="FAQ">FAQ</a>
+          <a href="contact.html" data-ja="お問い合わせ" data-en="Contact">Contact</a>
+          <a href="privacy.html" data-ja="プライバシーポリシー" data-en="Privacy">Privacy</a>
+        </nav>
+        <!-- copyright -->
+        <p class="mutya-footer__copyright">
+          © 2020 MUTYA SKIN. All rights reserved.
+        </p>  
+      </div>
+    </footer>
+    <!-- footer end-->
+    <!-- script cart-->
+    <script src="js/cart.js"></script>
+    <!-- // Language-->
+    <script src="js/lang.js"></script>
+    <script src="js/responsive-nav.js"></script>
+    <!-- modal pop up start-->    
+    <script src="js/modal.js"></script>
+  </body>
+</html>

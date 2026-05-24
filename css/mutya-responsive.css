@@ -1,0 +1,354 @@
+@charset "utf-8";
+
+/* Mutya responsive layer: desktop styles stay above this file. */
+html {
+  scroll-behavior: smooth;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(137, 105, 74, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #6f4f35;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  box-shadow: 0 10px 28px rgba(91, 63, 39, 0.12);
+  z-index: 1002;
+}
+
+.nav-toggle__bar,
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.nav-toggle__bar {
+  position: relative;
+}
+
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle__bar::before {
+  top: -7px;
+}
+
+.nav-toggle__bar::after {
+  top: 7px;
+}
+
+.nav-toggle.is-active .nav-toggle__bar {
+  background: transparent;
+}
+
+.nav-toggle.is-active .nav-toggle__bar::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-active .nav-toggle__bar::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 1100px) {
+  .header,
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    min-height: 82px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+  }
+
+  .logo,
+  .header .logo {
+    width: auto;
+  }
+
+  .logo img,
+  .header .logo img,
+  .site-header .logo img,
+  .header > img {
+    width: auto !important;
+    max-width: 150px;
+    height: 58px !important;
+    object-fit: contain;
+  }
+
+  .site-header .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .site-header > nav {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(84vw, 360px);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 8px;
+    padding: 104px 28px 28px;
+    background: rgba(255, 252, 247, 0.98);
+    box-shadow: -24px 0 60px rgba(59, 43, 27, 0.18);
+    transform: translateX(105%);
+    transition: transform 0.32s ease;
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  .site-header > nav.is-open {
+    transform: translateX(0);
+  }
+
+  .site-header > nav a,
+  .site-header > nav .btn {
+    width: 100%;
+    margin-left: 0;
+    padding: 14px 0;
+    font-size: 17px;
+    line-height: 1.25;
+    color: #4f3928;
+  }
+
+  .site-header > nav .btn,
+  .site-header > nav .btn-lux {
+    justify-content: center;
+    margin-top: 12px;
+    padding: 13px 18px;
+  }
+
+  .site-header .lang-switch {
+    margin-left: 12px;
+    display: flex;
+    gap: 6px;
+  }
+
+  .site-header .lang-btn,
+  .lang-switch button {
+    min-width: 42px;
+    min-height: 38px;
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section,
+  .faq,
+  .contact-info,
+  .privacy,
+  .checkout-wrapper,
+  .cart-wrapper {
+    width: min(100%, 680px);
+    padding: 48px 18px 72px;
+  }
+
+  .hero01,
+  .hero02,
+  .hero03 {
+    min-height: 72vh;
+    padding: 120px 22px 56px;
+    background-size: min(86vw, 420px);
+    background-position: center bottom;
+    align-items: flex-start;
+  }
+
+  .hero02,
+  .hero03 {
+    min-height: 48vh;
+  }
+
+  .hero-text,
+  .hero-text--left,
+  .hero-text--right,
+  .hero-text--center {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+    padding-bottom: 0;
+  }
+
+  .hero-text h1,
+  .hero-text h2,
+  .section-title {
+    font-size: clamp(30px, 9vw, 46px);
+    line-height: 1.12;
+  }
+
+  .section h2 {
+    padding-bottom: 32px;
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .grid,
+  .grid01,
+  .grid02,
+  .grid03,
+  .grid04,
+  .sets-grid,
+  .store-grid,
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 24px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card {
+    width: min(100%, 420px);
+    max-width: 100%;
+    padding: 28px 20px 34px;
+  }
+
+  .card img {
+    height: auto;
+    max-height: 220px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .about-text {
+    padding: 42px 18px 18px;
+  }
+
+  .about-text p,
+  .paragraph,
+  .mutya-ingredients ul {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .video-wrapper iframe,
+  .map-wrapper iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mutya-footer__sns,
+  .mutya-footer__navi {
+    gap: 14px;
+  }
+
+  .cart-wrapper,
+  .checkout-wrapper {
+    margin: 28px auto;
+    border-radius: 18px;
+  }
+
+  .cart-item,
+  .order-item {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background-size: auto 100%;
+    font-size: 15px;
+  }
+
+  .header:not(.site-header) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 14px;
+    padding: 14px;
+  }
+
+  .header:not(.site-header) a,
+  .header:not(.site-header) .btn-primary {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .site-header {
+    padding: 10px 14px;
+  }
+
+  .site-header .lang-switch {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin: 8px 0 0;
+  }
+
+  .site-header > nav {
+    width: 100vw;
+    padding-top: 126px;
+  }
+
+  .hero01 {
+    min-height: 76vh;
+    background-size: 96vw;
+  }
+
+  .hero02,
+  .hero03 {
+    min-height: 42vh;
+    background-size: 90vw;
+  }
+
+  .btn,
+  button,
+  .pay-btn {
+    justify-content: center;
+    max-width: 100%;
+    min-height: 44px;
+  }
+
+  .section {
+    padding-top: 34px;
+  }
+
+  .card h2 {
+    font-size: 23px;
+  }
+
+  .cart-wrapper,
+  .checkout-wrapper {
+    width: calc(100% - 24px);
+    padding: 30px 16px 40px;
+  }
+
+  .cart-total,
+  .cart-item,
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+}

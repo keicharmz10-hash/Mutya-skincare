@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+      <title>Cart | MUTYA SKIN</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/base.css">
+      <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet" href="css/mutya-responsive.css">
+</head>
+
+    <body class="cart-page">
+
+    <header class="header">
+      <img src="images/logo/clearmutyalogo.png" alt="MUTYA SKIN" style="  width: 200px;">
+      <a href="index.html" data-ja="⌂ ホームに戻る" data-en="⌂Back to Home">⌂ ホームに戻る</a>
+      <a href="products.html" data-ja="◯商品ページに戻る" data-en="◯Back to Product Page">◯商品ページに戻る</a>
+      <a href="sets.html" data-ja="▢セットページに戻る" data-en="▢Back to Set Page">▢セットページに戻る</a>
+      <span id="cart-count">0</span>
+      <!-- Languange Switch -->
+      <div class="lang-switch">
+        <button class="lang-btn" onclick="setLang('ja')">JP</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </header>
+
+    <main class="cart-wrapper">
+      <h1 data-ja="🛒カート" data-en="🛒 Your Cart">🛒 Your Cart</h1>
+
+      <!-- PAGE CART -->
+      <div id="cart-items"></div>
+
+      <div class="cart-total">
+        Total: ¥<span id="cart-total">0</span>
+      </div>
+
+      <a href="checkout.html" class="btn checkout-btn">
+        Proceed to Checkout →
+      </a>
+    </main>
+    <script src="js/cart.js"></script>
+    <script src="js/lang.js"></script>
+  </body>
+</html>

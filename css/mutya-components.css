@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden; /* ✅ prevents sparkle overflow scrollbar */
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: #c9b37e;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid #000;
+  background: none;
+  padding: 8px 14px;
+}
+
+.btn,
+button {
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+  background: #bfa46a;
+  box-shadow: 0 6px 20px rgba(191, 164, 106, 0.35);
+  transform: translateY(-1px);
+}
+
+
+/* ===============================
+   FORMS
+================================ */
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+
+/* ===============================
+   IMAGE + TEXT BOX
+================================ */
+.image-text-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.image-text-box img {
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+/* ===============================
+   QUANTITY
+================================ */
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.quantity-box input {
+  width: 60px;
+  text-align: center;
+}
+
+/* ===============================
+   CART ICON
+================================ */
+.cart-icon {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+}
+
+#cart-count {
+  background: rgba(245, 245, 220, 0.397);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 4px;
+}
+
+/* ===============================
+   CART MODAL (OVERLAY)
+================================ */
+.cart-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 10000;
+}
+
+.cart-modal.active {
+  display: block;
+}
+
+/* ===============================
+   CART DRAWER (RIGHT SLIDE)
+================================ */
+.cart-box {
+  position: fixed;
+  top: 0;
+  right: -420px;               /* hidden by default */
+  width: 380px;
+  height: 45vh;
+  background: #f7f2ec;
+  padding: 28px 24px;
+  border-radius: 24px 0 0 24px;
+  box-shadow: -10px 0 40px rgba(0,0,0,.15);
+  overflow-y: auto;
+  transition: right .4s ease;
+  z-index: 10001;
+}
+
+/* Open state */
+.cart-modal.active .cart-box {
+  right: 0;
+}
+
+/* ===============================
+   CART CONTENT
+================================ */
+.cart-box h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .05em;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #c7bfb5;
+  background: #fff;
+
+  color: #6b5e4a;        /* ✅ visible text */
+  font-size: 18px;      /* ✅ readable */
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.cart-total {
+  font-weight: bold;
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+  margin-top: 20px;
+}
+
+.cart-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cart-actions .btn {
+  background: #c7b299;
+}
+
+.cart-actions .btn-outline {
+  border: 1px solid #c7b299;
+  color: #6b5e4a;
+}
+
+/* ===============================
+   LUX BUTTON
+================================ */
+.btn-lux {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #c7b299;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+}
+
+.cart-svg {
+  width: 18px;
+  height: 18px;
+  transition: transform .4s ease;
+}
+
+.btn-lux:hover .cart-svg {
+  transform: translateX(4px);
+}
+
+/* ===== PRODUCT MODAL ===== */
+.product-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+
+.product-modal.active {
+  display: flex;
+}
+
+.product-modal__box {
+  background: #fff;
+  max-width: 420px;
+  width: 90%;
+  padding: 28px;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  animation: modalFadeUp 0.3s ease;
+}
+
+@keyframes modalFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-modal__img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.product-modal h3 {
+  margin-bottom: 10px;
+}
+
+.product-modal p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+
+/* ===============================
+   MUTYA SPARKLE HEADER
+================================ */
+:root {
+  --mutya-gold: #e6d3a3;
+  --mutya-glow: rgba(230, 211, 163, 0.45);
+}
+
+.site-header {
+  position: relative;
+  backdrop-filter: saturate(1.02);
+}
+
+/* Logo glow */
+.site-header img {
+  filter: drop-shadow(0 0 10px var(--mutya-glow));
+}
+
+/* Sparkle sweep (no overflow issues) */
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    transparent 45%,
+    rgba(255, 245, 210, 0.85) 50%,
+    transparent 55%
+  );
+
+  transform: translateX(-150%);
+  animation: mutyaSparkle 1.4s ease-out forwards;
+}
+
+@keyframes mutyaSparkle {
+  0%   { transform: translateX(-150%); opacity: 0; }
+  25%  { opacity: 1; }
+  100% { transform: translateX(150%); opacity: 0; }
+}
