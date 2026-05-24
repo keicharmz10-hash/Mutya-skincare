@@ -1,0 +1,257 @@
+.mutya-experience {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Playfair Display', 'sans-serif';
+}
+
+.mutya-experience h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.mutya-experience h3 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.video-wrapper,
+.map-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+
+.video-wrapper iframe,
+.map-wrapper iframe {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border: 0;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.store-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mutya-ingredients ul {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Fade-in luxury effect */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.2s ease forwards;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Subtle shimmer highlight */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 215, 160, 0.35),
+      transparent
+    );
+    animation: shimmer 3.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      left: 150%;
+    }
+  }
+
+  
+  /* Mobile default */
+.mutya-experience {
+    padding: 40px 16px;
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) {
+    .mutya-experience {
+      padding: 60px 40px;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .mutya-experience {
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+  
+/* Mobile default */
+.mutya-experience {
+    padding: 40px 16px;
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) {
+    .mutya-experience {
+      padding: 60px 40px;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .mutya-experience {
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+  
+  .store-card {
+    border: 1px solid #eee;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  
+  .store-btn {
+    display: inline-block;
+    margin-top: 12px;
+    color: #b88a5a;
+    text-decoration: none;
+    font-weight: 500;
+  }
+   /* gallery */
+  .gallery-grid img {
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  }
+  
+  .gallery-grid img:nth-child(1) {
+    animation: drift 7s ease-in-out infinite;
+  }
+  .gallery-grid img:nth-child(2) {
+    animation: drift 9s ease-in-out infinite;
+  }
+  .gallery-grid img:nth-child(3) {
+    animation: drift 8s ease-in-out infinite;
+  }
+  .gallery-grid img:nth-child(4) {
+    animation: drift 10s ease-in-out infinite;
+  }
+  
+  @keyframes drift {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+  }
+   /* stores */
+  .mutya-stores {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 20px;
+  }
+  
+  .mutya-stores h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .store-grid {
+    display: grid;
+    gap: 30px;
+  }
+  
+  .store-card {
+    border: 1px solid #eee;
+    border-radius: 18px;
+    padding: 30px;
+    background: transparent;
+    position: relative;
+    box-shadow: #332411;
+  }
+  
+  .store-card h3 {
+    margin: 12px 0;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .store-card:hover {
+    transform: translateY(-6px);
+  }
+  .store-tag {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    display: inline-block;
+  }
+  
+  .flagship {
+    background: #f4e8d8;
+    color: #8b6a3d;
+  }
+  
+  .popup {
+    background: #eee;
+    color: #555;
+  }
+  
+  .store-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #b88a5a;
+    font-weight: 500;
+  }
+  
+  .store-coming {
+    display: inline-block;
+    margin-top: 20px;
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  /* Desktop */
+  @media (min-width: 768px) {
+    .store-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

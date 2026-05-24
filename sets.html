@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pricing | MUTYA SKIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/mutya-base.css">
+    <link rel="stylesheet" href="css/mutya-layout.css">
+    <link rel="stylesheet" href="css/mutya-hero.css">
+    <link rel="stylesheet" href="css/mutya-components.css">
+    <link rel="stylesheet" href="css/mutya-pages.css">
+    <link rel="stylesheet" href="css/mutya-loader.css">
+    <link rel="stylesheet" href="css/mutya-responsive.css">
+    <link rel="stylesheet" href="css/experience.css">
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header site-header">
+      <div class="logo">
+        <a href="index.html" aria-label="Back to Home">
+          <img src="images/logo/clearmutyalogo.png" alt="Mutya Skin">
+        </a>
+      </div>
+      <!-- Nav Main -->
+      <nav aria-label="Main Navigation">
+        <a href="index.html" class="nav-link" data-ja="ホーム" data-en="Home">ホーム</a>
+        <a href="about.html" class="nav-link" data-ja="Mutyaについて" data-en="About Us">Mutyaについて</a>
+        <a href="science.html" class="nav-link" data-ja="サイエンス" data-en="Science">サイエンス</a>
+        <a href="products.html" class="nav-link" data-ja="商品一覧" data-en="Products">商品一覧</a>
+        <a href="sets.html" class="nav-link active" data-ja="セット" data-en="Sets">セット</a>
+        <a href="contact.html" class="nav-link" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+        <button class="btn btn-lux" onclick="openCart()" aria-label="Open cart">
+          <svg class="cart-svg" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="9" cy="20" r="1" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1" fill="currentColor"/>
+          </svg>
+          <span id="cart-count">0</span>
+        </button>
+      </nav>
+      <!-- Languange Switch -->
+        <div class="lang-switch">
+          <button class="lang-btn" onclick="setLang('ja')">JP</button>
+          <button class="lang-btn" onclick="setLang('en')">EN</button>
+        </div>
+    </header>
+      <!-- CART MODAL -->
+      <div id="cart-modal" class="cart-modal">
+        <div class="cart-box">
+          <h3>🛒 Your Cart</h3>
+          <div id="cart-items"></div>
+
+          <div class="cart-total">
+            Total: ¥<span id="cart-total">0</span>
+          </div>
+
+          <div class="cart-actions">
+            <button onclick="closeCart()" class="btn-outline">Continue Shopping</button>
+            <a href="checkout.html" class="btn">Checkout</a>
+          </div>
+        </div>
+      </div>
+      
+    <!-- pricing-title start-->
+    <section class="pricing-title">
+      <h1 class="fade-up shimmer" data-ja="価格とセット" 
+        data-en="Pricing & Sets">
+        価格とセット
+      </h1>
+      <!-- pricing-title end-->
+      <!-- set grid start -->
+      <div class="sets-grid">
+      <!-- SINGLE PRODUCTS Start -->
+      <article class="card">
+        <h2 class="fade-up shimmer" data-ja="単品商品" data-en="Single Products">
+          単品商品
+        </h2>
+
+        <p data-ja="初めての方にもおすすめ。/肌に合わせて選べる単品ケア。"
+          data-en="Perfect for first-time users./Choose based on your skin needs.">
+          初めての方にもおすすめ。<br>
+          肌に合わせて選べる単品ケア。
+        </p>
+        <br>
+        <ul>
+          <li>
+            <strong class="fade-up shimmer" data-ja="ラディアント グロウ セラム"
+                data-en="Radiant Glow Serum">
+              ラディアント グロウ セラム
+          </strong>
+            <p data-ja="¥6,500（税込）"
+              data-en="¥6,500 (Tax included)">
+              ¥6,500（税込）
+            </p>
+            <button onclick="addToCart('Radiant Glow Serum',6500)"
+              data-ja="カートに追加"
+              data-en="Add to Cart">
+              カートに追加
+            </button>
+          </li>
+
+          <li>
+            <strong class="fade-up shimmer" 
+              data-ja="ハイドレーティング エッセンス クリーム"
+              data-en="Hydrating Essence Cream">
+              ハイドレーティング エッセンス クリーム
+          </strong>
+            <p data-ja="¥6,800（税込）"
+              data-en="¥6,800 (Tax included)">
+              ¥6,800（税込）
+            </p>
+            <button onclick="addToCart('Hydrating Essence Cream',6800)"
+              data-ja="カートに追加"
+              data-en="Add to Cart">
+              カートに追加
+            </button>
+          </li>
+
+          <li>
+            <strong class="fade-up shimmer" data-ja="ルミナス リニューアル ミスト"
+                data-en="Luminous Renewal Mist">
+              ルミナス リニューアル ミスト
+          </strong>
+            <p data-ja="¥3,800（税込）"
+              data-en="¥3,800 (Tax included)">
+              ¥3,800（税込）
+            </p>
+            <button onclick="addToCart('Luminous Renewal Mist',3800)"
+              data-ja="カートに追加"
+              data-en="Add to Cart">
+              カートに追加
+            </button>
+          </li>
+
+          <li>
+            <strong class="fade-up shimmer" data-ja="ナチュラルリッチ クレンジングオイル"
+                data-en="Natural Rich Cleansing Oil">
+              ナチュラルリッチ クレンジングオイル
+          </strong>
+            <p data-ja="¥1,800（税込）"
+              data-en="¥1,800 (Tax included)">
+              ¥1,800（税込）
+            </p>
+            <button onclick="addToCart('Cleansing Oil',1800)"
+              data-ja="カートに追加"
+              data-en="Add to Cart">
+              カートに追加
+            </button>
+          </li>
+        </ul>
+      </article>
+        <!-- SINGLE PRODUCTS End -->
+        <!-- POPULAR SET start -->
+        <article class="card">
+          <h2 class="fade-up shimmer"
+            data-ja="ポピュラー グロウ セット"
+            data-en="Popular Glow Set">
+            ポピュラー グロウ セット
+          </h2>
+          <br>
+          <p class="price"
+            data-ja="¥15,800（税込）"
+            data-en="¥15,800 (Tax included)">
+            ¥15,800（税込）
+          </p>
+          <br>
+          <p data-ja="毎日のスキンケアを整える、/人気の基本セット。"
+            data-en="A daily skincare essential./Our most popular starter set.">
+            毎日のスキンケアを整える、<br>
+            人気の基本セット。
+          </p>
+          <br>
+          <strong data-ja="セット内容" data-en="Includes">
+            セット内容
+          </strong>
+          <br>
+          <ul>
+            <li data-ja="ラディアント グロウ セラム"
+                data-en="Radiant Glow Serum">ラディアント グロウ セラム</li>
+            <li data-ja="ハイドレーティング エッセンス クリーム"
+                data-en="Hydrating Essence Cream">ハイドレーティング エッセンス クリーム</li>
+            <li data-ja="ルミナス リニューアル ミスト"
+                data-en="Luminous Renewal Mist">ルミナス リニューアル ミスト</li>
+          </ul>
+
+          <button onclick="addToCart('Popular Set',15800)"
+            data-ja="カートに追加"
+            data-en="Add to Cart">
+            カートに追加
+          </button>
+        </article>
+        <!-- POPULAR SET End -->
+        <!-- PREMIUM SET Start-->
+        <article class="card">
+          <h2 class="fade-up shimmer" 
+            data-ja="プレミアム リチュアル/ セット"
+            data-en="Premium Ritual Set">
+            プレミアム リチュアル セット
+          </h2>
+          <p class="price"
+            data-ja="¥29,000（税込）"
+            data-en="¥29,000 (Tax included)">
+            ¥29,000（税込）
+          </p>
+          <br>
+          <p data-ja="フルサイズ製品と特別パッケージを含む、/Mutya Skincare のフルライン体験。/スキンケアを日常の儀式として大切にする方へ。"
+            data-en="Experience the full Mutya Skincare line,/including full-size products and exclusive packaging./For those who cherish skincare as a daily ritual.">
+            フルサイズ製品と特別パッケージを含む、<br>
+            Mutya Skincare のフルライン体験。<br>
+            スキンケアを日常の儀式として大切にする方へ。
+          </p>
+          <br>
+          <strong data-ja="セット内容" data-en="Includes">
+            セット内容
+          </strong>
+
+          <ul>
+            <li data-ja="全商品" data-en="All products">全商品</li>
+            <li data-ja="トラベルサイズ（限定特典）"
+                data-en="Travel size (Exclusive bonus)">
+                トラベルサイズ（限定特典）
+            </li>
+          </ul>
+
+          <button onclick="addToCart('Premium',29000)"
+            data-ja="カートに追加"
+            data-en="Add to Cart"
+            >
+            カートに追加
+          </button>
+        </article>
+        <!-- PREMIUM SET End -->
+      </div>
+    </section>
+    <!-- footer start -->
+    <footer class="index-footer">
+      <div class="mutya-footer__inner">
+          <!-- logo -->
+          <a class="mutya-footer__logo" href="index.html">
+          <img src="images/logo/clearmutyalogo.png" alt="MUTYA SKIN">
+        </a>
+        <!-- Social media -->
+        <nav class="mutya-footer__sns" aria-label="Social media">
+          <a class="mutya-footer__sns-link" href="https://www.instagram.com/mutyaskincare/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="mutya-footer__sns-link" href="https://x.com/home" target="_blank" rel="noopener noreferrer">X</a>
+          <a class="mutya-footer__sns-link" href="https://www.youtube.com/channel/UC4Fh0YcW9X0qU20ruh9Om5w" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </nav>
+        <!-- TEL Number・電話番号 -->
+        <p class="mutya-footer__tel">
+          <span data-ja="MUTYA SKIN お客さま窓口" data-en="MUTYA SKIN Inquiries">MUTYA SKIN Inquiries</span><br>
+          <a href="tel:0120147554">0120-147-554</a>
+        </p>
+        <!-- faq,contact,privacy -->
+        <nav class="mutya-footer__navi" aria-label="Footer navigation">
+          <a href="faq.html" data-ja="よくあるご質問" data-en="FAQ">FAQ</a>
+          <a href="contact.html" data-ja="お問い合わせ" data-en="Contact">Contact</a>
+          <a href="privacy.html" data-ja="プライバシーポリシー" data-en="Privacy">Privacy</a>
+        </nav>
+        <!-- copyright -->
+        <p class="mutya-footer__copyright">
+          © 2020 MUTYA SKIN. All rights reserved.
+        </p>  
+      </div>
+    </footer>
+    <!-- footer end-->
+      <!-- js cart-->
+      <script src="js/cart.js"></script>
+      <!-- // Language for lang start -->
+      <script src="js/lang.js"></script>
+      <!-- modal pop up start-->    
+      <script src="js/modal.js"></script>
+      
+  </body>
+</html>

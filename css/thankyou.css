@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #f7f2ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.thankyou-box {
+  background: #fff;
+  padding: 80px 60px;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 520px;
+  animation: fadeUp 1.2s ease;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.message {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+}
+
+.jp {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.home-btn {
+  margin-top: 40px;
+  padding: 14px 36px;
+  border-radius: 30px;
+  background: #c7b299;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mutya-logo-fade {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  animation: logoFade 1.8s ease forwards;
+}
+
+@keyframes logoFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

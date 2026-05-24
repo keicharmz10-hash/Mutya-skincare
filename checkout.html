@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Checkout | MUTYA SKIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/base.css">
+  </head>
+
+  <body>
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <img src="images/logo/clearmutyalogo.png" alt="MUTYA SKIN" style=" width:200px;">
+      <a href="index.html" data-ja="⌂ホームに戻る" data-en="⌂Back to Home">⌂ホームに戻る</a>
+      <a href="cart.html" class="btn-primary" data-ja="カートを見る🛒" data-en="View Cart🛒">カートを見る🛒</a>
+      <div class="lang-switch">
+        <button class="lang-btn" onclick="setLang('ja')">JP</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </header>
+    <!-- ===== Checkout Wrapper ===== -->
+    <main class="checkout-wrapper">
+      <h1 class="fade-up shimmer" data-ja="チェックアウト" data-en="Check Out">チェックアウト</h1>
+
+      <!-- 📦 Shipping -->
+      <div class="section-title" data-ja="配送先情報" data-en="Shipping Information">
+        配送先情報
+      </div>
+
+      <form action="#" method="post" novalidate>
+        <div class="form-group">
+      
+          <label for="name" class="visually-hidden"
+                data-ja="お名前" data-en="Name">お名前</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+      
+          <label for="postcode" class="visually-hidden"
+                data-ja="郵便番号" data-en="Post Number">郵便番号</label>
+          <input type="text" id="postcode" name="postcode"
+                inputmode="numeric"
+                autocomplete="postal-code">
+      
+          <label for="address" class="visually-hidden"
+                data-ja="住所" data-en="Home address">住所</label>
+          <input type="text" id="address" name="address"
+                autocomplete="address-line1">
+      
+          <label for="phone" class="visually-hidden"
+                data-ja="電話番号" data-en="Phone Number">電話番号</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+      
+        </div>
+      </form>
+      <!-- 💳 Payment -->
+      <div class="section-title"
+          data-ja="お支払い情報（ダミー）"
+          data-en="Payment Information (Dummy)">
+        お支払い情報（ダミー）
+      </div>
+
+      <div class="form-group">
+        <input type="text"
+              placeholder="カード番号 1234 5678 9012 3456"
+              inputmode="numeric"
+              data-ja="カード番号 1234 5678 9012 3456"
+              data-en="Card Number 1234 5678 9012 3456">
+              
+        <input type="text"
+              placeholder="有効期限 MM / YY"
+              data-ja="有効期限 MM / YY"
+              data-en="Valid Thru MM / YY">
+
+        <input type="text"
+              placeholder="CVC"
+              inputmode="numeric">
+      </div>
+
+      <!-- 🛒 Order Summary -->
+      <div class="section-title" data-ja="ご注文内容" data-en="Order Details">
+        ご注文内容
+      </div>
+
+      <div class="order-summary" id="summary"></div>
+
+      <button class="pay-btn"
+              onclick="completeOrder()"
+              data-ja="注文する"
+              data-en="Place Order">
+        注文する
+      </button>
+    </main>
+  <!-- Added to Cart Toast -->
+  <!-- ===== Order Script ===== -->
+  <script src="js/orderscript.js"></script>
+  <!-- ===== Language Switch ===== -->
+  <script src="js/lang.js"></script>
+
+  </body>
+</html>
